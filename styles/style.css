@@ -1,0 +1,17 @@
+.login {
+    padding-top: 150px;
+}
+
+
+.form_login{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+
+
+.form-control{
+    width: 500px;
+}
