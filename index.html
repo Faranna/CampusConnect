@@ -105,11 +105,13 @@
           // Collect form data
           var username = document.getElementById("username").value;
           var password = document.getElementById("password").value;
+          var email = document.getElementById("email").value;
   
           // Prepare JSON object
           var data = {
               "username": username,
-              "password": password
+              "password": password,
+              "email": email,
           };
   
           // Perform AJAX request using Fetch API
