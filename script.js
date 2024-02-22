@@ -7,6 +7,14 @@ function onChange() {
       confirm.setCustomValidity('Passwords do not match');
     }
   }
+//   $('.btn').on('click', function() {
+//     var $this = $(this);
+//   $this.button('loading');
+//     setTimeout(function() {
+//        $this.button('reset');
+//    }, 8000);
+//    });
+
 document.getElementById("registrationForm").addEventListener("submit", function(event) {
     event.preventDefault();
     
@@ -14,15 +22,16 @@ document.getElementById("registrationForm").addEventListener("submit", function(
     let username = document.getElementById("username").value;
     let password = document.getElementById("password").value;
     let email = document.getElementById("email").value;
- 
-    let message = document.getElementById("message");
-    
+    let firstName = document.getElementById("firstName").value;
+    let lastName = document.getElementById("lastName").value;
     
     // Prepare JSON object
     var data = {
         "username": username,
         "password": password,
         "email": email,
+        "firstName": firstName,
+        "lastName" : lastName
     };
 
     // Perform AJAX request using Fetch API

@@ -60,7 +60,7 @@ body{
 }
 
 .container.active .forms{
-    height: 600px;
+    height: 800px;
 }
 .container .form .title{
     position: relative;
