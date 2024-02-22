@@ -67,13 +67,14 @@
                       <i class="uil uil-envelope icon"></i>
                   </div>
                   <div class="input-field">
-                      <input type="password" class="password" id="password" placeholder="Create a password" required>
+                      <input type="password" name="password" class="password" onChange="onChange()" id="password" placeholder="Create a password" required>
                       <i class="uil uil-lock icon"></i>
                   </div>
                   <div class="input-field">
-                      <input type="password" class="password" id="confirmPassword" placeholder="Confirm a password" required>
+                      <input type="password" name="confirmPassword" class="password"  onChange="onChange()" id="confirmPassword" placeholder="Confirm a password" required>
                       <i class="uil uil-lock icon"></i>
                       <i class="uil uil-eye-slash showHidePw"></i>
+                      <span id="message"></span>
                   </div>
           
                   <div class="checkbox-text">
@@ -97,54 +98,7 @@
         </div>
     </div>
 
-     <script src="script.js"></script> 
-     <script>
-      document.getElementById("registrationForm").addEventListener("submit", function(event) {
-          event.preventDefault();
-          
-          // Collect form data
-          var username = document.getElementById("username").value;
-          var password = document.getElementById("password").value;
-          var email = document.getElementById("email").value;
-  
-          // Prepare JSON object
-          var data = {
-              "username": username,
-              "password": password,
-              "email": email,
-          };
-  
-          // Perform AJAX request using Fetch API
-          fetch('https://abir.nsudesk.tech/cmp/reg', {
-              method: 'POST',
-              headers: {
-                "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
-              },
-              body: JSON.stringify(data)
-          })
-          .then(response => {
-              if (!response.ok) {
-                  throw new Error('Registration failed.');
-              }
-              return response.json();
-          })
-          .then(data => {
-              // Handle successful registration
-              alert("Registration successful");
-              // Optionally redirect the user to a different page
-              // window.location.href = "success.html";
-              console.log("Registration successful:", data);
-              //window.location.href = 'otp.html';
-
-          })
-          .catch(error => {
-              // Handle registration error
-              alert("Registration failed. Please try again later.");
-              console.error('Error:', error);
-          });
-      });
-  </script>
-  
+     <script src="script.js">  </script>
   
   
   
