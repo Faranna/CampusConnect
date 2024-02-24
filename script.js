@@ -1,3 +1,5 @@
+document.getElementById("registerMessage").style.display = 'none';
+
 function onChange() {
     const password = document.querySelector('input[name=password]');
     const confirm = document.querySelector('input[name=confirmPassword]');
@@ -24,7 +26,11 @@ document.getElementById("registrationForm").addEventListener("submit", function(
     let email = document.getElementById("email").value;
     let firstName = document.getElementById("firstName").value;
     let lastName = document.getElementById("lastName").value;
+    const registerButton = document.getElementById("registerButton");
     
+    const registerMessage = document.getElementById("registerMessage");
+    registerButton.style.display = 'none';
+    registerMessage.style.display = 'block';
     // Prepare JSON object
     var data = {
         "username": username,
@@ -52,9 +58,9 @@ document.getElementById("registrationForm").addEventListener("submit", function(
         // Handle successful registration
         alert("Registration successful");
         // Optionally redirect the user to a different page
-        // window.location.href = "success.html";
+        
         console.log("Registration successful:", data);
-        //window.location.href = 'otp.html';
+        window.location.href = 'otp.html';
 
     })
     .catch(error => {
