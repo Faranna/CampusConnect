@@ -27,15 +27,16 @@ document.getElementById("registrationForm").addEventListener("submit", function(
     registerMessage.style.display = 'block';
     // Prepare JSON object
     var data = {
-        "username": username,
-        "password": password,
-        "email": email,
-        "firstName": firstName,
-        "lastName" : lastName
+        "username": "username",
+        "password": "password",
+        "email": "email",
+        "firstName": "firstName",
+        "lastName" : "lastName"
     };
-
+    localStorage.setItem("baseurl", "https://abir.nsudesk.tech/cmp")
+    let url = localStorage.getItem("baseurl")
     // Perform AJAX request using Fetch API
-    fetch('https://abir.nsudesk.tech/cmp/reg', {
+    fetch(url, {
         method: 'POST',
         headers: {
           "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
@@ -49,23 +50,23 @@ document.getElementById("registrationForm").addEventListener("submit", function(
         return response.json();
     })
     .then(data => {
-        // Handle successful registration
-        // alert("Registration successful");
-        // Optionally redirect the user to a different page
+        
         
         console.log("Registration successful:", data);
         // window.location.href = 'otp.html';
-        if(response.status = 0) {
-            
-        }
+        if(data.status = 0) {
+            alert(data.msg);
+        } 
 
     })
     .catch(error => {
-        // Handle registration error
+        
         alert("Registration failed. Please try again later.");
         console.error('Error:', error);
     });
 });
+
+
 
 
 
