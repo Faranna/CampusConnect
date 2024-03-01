@@ -33,10 +33,9 @@ document.getElementById("registrationForm").addEventListener("submit", function(
         "firstName": "firstName",
         "lastName" : "lastName"
     };
-    localStorage.setItem("baseurl", "https://abir.nsudesk.tech/cmp")
-    let url = localStorage.getItem("baseurl")
+    const  url = localStorage.getItem("baseurl")
     // Perform AJAX request using Fetch API
-    fetch(url, {
+    fetch(url+"/reg", {
         method: 'POST',
         headers: {
           "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
