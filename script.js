@@ -9,13 +9,7 @@ function onChange() {
       confirm.setCustomValidity('Passwords do not match');
     }
   }
-//   $('.btn').on('click', function() {
-//     var $this = $(this);
-//   $this.button('loading');
-//     setTimeout(function() {
-//        $this.button('reset');
-//    }, 8000);
-//    });
+
 
 document.getElementById("registrationForm").addEventListener("submit", function(event) {
     event.preventDefault();
@@ -56,11 +50,14 @@ document.getElementById("registrationForm").addEventListener("submit", function(
     })
     .then(data => {
         // Handle successful registration
-        alert("Registration successful");
+        // alert("Registration successful");
         // Optionally redirect the user to a different page
         
         console.log("Registration successful:", data);
-        window.location.href = 'otp.html';
+        // window.location.href = 'otp.html';
+        if(response.status = 0) {
+            
+        }
 
     })
     .catch(error => {
