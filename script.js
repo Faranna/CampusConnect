@@ -15,7 +15,7 @@ document.getElementById("registrationForm").addEventListener("submit", function(
     event.preventDefault();
     
     // Collect form data
-    let username = document.getElementById("username").value;
+    // let username = document.getElementById("username").value;
     let password = document.getElementById("password").value;
     let email = document.getElementById("email").value;
     let firstName = document.getElementById("firstName").value;
@@ -27,7 +27,7 @@ document.getElementById("registrationForm").addEventListener("submit", function(
     registerMessage.style.display = 'block';
     // Prepare JSON object
     var data = {
-        "username": username,
+        // "username": username,
         "password": password,
         "email": email,
         "firstName": firstName,
