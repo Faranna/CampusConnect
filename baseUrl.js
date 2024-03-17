@@ -1,3 +1,3 @@
 if (localStorage.getItem("baseurl") == null) {
-     localStorage.setItem("baseurl","https://abir.nsudesk.tech/cmp");
+     localStorage.setItem("baseurl","https://abir.mdabir.cloud/cmp");
   } 
