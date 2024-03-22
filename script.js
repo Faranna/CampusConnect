@@ -63,7 +63,8 @@ document.getElementById("registrationForm").addEventListener("submit", function(
             alert(data.msg);
         } else (data.status == 1) {
             window.location.href = 'otp.html';
-        }
+        } 
+        
        
 
     })
