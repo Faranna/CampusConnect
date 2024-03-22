@@ -61,8 +61,10 @@ document.getElementById("registrationForm").addEventListener("submit", function(
         // window.location.href = 'otp.html';
         if(data.status == 0) {
             alert(data.msg);
-        } 
-        window.location.href = 'otp.html';
+        } else (data.status == 1) {
+            window.location.href = 'otp.html';
+        }
+       
 
     })
     .catch(error => {
